@@ -7,12 +7,12 @@ You should have a [browserstack](https://www.browserstack.com/) account allowing
 
 [Download and start the BrowserstackLocal binary](https://www.browserstack.com/automate/node)
 
-## Run example
+## Run example
 
 ```bash
 $ npm i
 $ npm run start
-``
+```
 
 Adapt the username and key in test-runner/index.js
 
