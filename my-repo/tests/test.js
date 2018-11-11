@@ -1,8 +1,6 @@
 const tape = require( 'tape' )
 
-module.exports = async ( capabilities ) => {
-
-  return new Promise( resolve => {
+module.exports = ( capabilities ) => {
 
     tape( `Frontend test ${capabilities.browserName} ${capabilities.browser_version}`, async ( t ) => {
 
@@ -17,10 +15,5 @@ module.exports = async ( capabilities ) => {
       //---
       t.end()
 
-      resolve()
-
     } )
-
-  })
-
 }
