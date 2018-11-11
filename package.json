@@ -1,0 +1,26 @@
+{
+  "name": "so-tape-test-exited-without-ending-error-with-asynchronous-foreach-loops",
+  "version": "1.0.0",
+  "description": "Reproducing issue from SO question",
+  "main": "",
+  "scripts": {
+    "start": "serve -p 9999",
+    "test": "NODE_ENV=development node my-repo/tests/ | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mindcraft1/SO-Tape-test-exited-without-ending-error-with-asynchronous-forEach-loops.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mindcraft1/SO-Tape-test-exited-without-ending-error-with-asynchronous-forEach-loops/issues"
+  },
+  "homepage": "https://github.com/Mindcraft1/SO-Tape-test-exited-without-ending-error-with-asynchronous-forEach-loops#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "serve": "^10.0.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  }
+}
