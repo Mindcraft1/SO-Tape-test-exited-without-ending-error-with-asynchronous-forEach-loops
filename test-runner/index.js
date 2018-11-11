@@ -1,5 +1,3 @@
-const webdriver = require( 'selenium-webdriver' )
-
 // ---
 // default browser configs
 // ---
@@ -30,7 +28,7 @@ const browsers = [
   }
 ]
 
-module.exports = ( tests, url ) => {
+module.exports = ( tests  ) => {
 
   // ---
   // Asynchronous forEach loop
@@ -60,31 +58,20 @@ module.exports = ( tests, url ) => {
       // ---
       // Start and connect to remote browser
       // ---
-      console.info( '-- Starting remote browser hang on --', capabilities.browserName )
-      const browser = await new webdriver.Builder().
-        usingServer( 'http://hub-cloud.browserstack.com/wd/hub' ).
-        withCapabilities( capabilities ).
-        build()
+      console.log( '-- Simulate browser start -- ', capabilities.browserName )
+      const browser = await new Promise(resolve => setTimeout(resolve, 3000));
 
-      // ---
-      // Navigate to page which needs to be checked (url)
-      // ---
-      console.log('-- Navigate to URL --')
-      await browser.get( url )
+      // navigate to url in real world now
 
       // ---
       // Run the tests asynchronously
       // ---
       console.log( '-- Run tests --- ' )
       await asyncForEach( tests, async ( test ) => {
-        await test( browser, url, capabilities, webdriver )
+        await test( capabilities )
       } )
 
-      // ---
-      // Quit the remote browser when all tests for this browser are done
-      // and move on to next browser
-      // ---
-      browser.quit()
+      // Stop browser in real world now and go to next one
 
     } )
 
