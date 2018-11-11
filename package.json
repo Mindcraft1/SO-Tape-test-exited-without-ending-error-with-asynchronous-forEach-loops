@@ -4,8 +4,7 @@
   "description": "Reproducing issue from SO question",
   "main": "",
   "scripts": {
-    "start": "serve -p 9999",
-    "test": "NODE_ENV=development node my-repo/tests/ | tap-spec"
+    "test": "node my-repo/tests/ | tap-spec"
   },
   "repository": {
     "type": "git",
