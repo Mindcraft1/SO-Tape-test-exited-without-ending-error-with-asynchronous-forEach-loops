@@ -3,9 +3,20 @@ Reproducing issue from [SO question](https://stackoverflow.com/questions/5322278
 
 This is a simplified version of my real world problem
 
-## Run example
+## Run example
 
 ```bash
 $ npm i
+<<<<<<< HEAD
+=======
+$ npm run start
+```
+
+Adapt the username and key in test-runner/index.js
+
+In second terminal
+
+```bash
+>>>>>>> 2a678f0d38b4659ceb1e07b0d7850d831acb19e9
 $ npm run test
 ``
