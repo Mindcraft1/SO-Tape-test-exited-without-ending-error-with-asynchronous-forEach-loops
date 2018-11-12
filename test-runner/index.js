@@ -59,7 +59,7 @@ module.exports = ( tests  ) => {
       // Start and connect to remote browser
       // ---
       console.log( '-- Simulate browser start -- ', capabilities.browserName )
-      const browser = await new Promise(resolve => setTimeout(resolve, 3000));
+      const browser = await new Promise( resolve => setTimeout( resolve, 3000 ) )
 
       // navigate to url in real world now
 
@@ -72,6 +72,9 @@ module.exports = ( tests  ) => {
       } )
 
       // Stop browser in real world now and go to next one
+      // This should only be logged when the all tests for this browser are finished
+      console.log('quit: ', capabilities.browserName)
+
 
     } )
 
